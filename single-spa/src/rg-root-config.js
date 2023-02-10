@@ -19,7 +19,7 @@ registerApplication({
 registerApplication({
   name: "@rg/react-multiples",
   app: () => System.import("@rg/react-multiples"),
-  activeWhen: (location) => location.pathname === '/react-multiples',
+  activeWhen: ['/react-multiples'],
 });
 
 // registerApplication({
