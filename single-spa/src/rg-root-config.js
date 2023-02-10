@@ -22,6 +22,12 @@ registerApplication({
   activeWhen: ['/react-multiples'],
 });
 
+registerApplication({
+  name: "@rg/react-parcel",
+  app: () => System.import("@rg/react-parcel"),
+  activeWhen: (location) => location.pathname === '/react-parcel',
+});
+
 // registerApplication({
 //   name: "@rg/navbar",
 //   app: () => System.import("@rg/navbar"),
