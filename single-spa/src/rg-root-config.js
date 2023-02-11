@@ -23,10 +23,23 @@ registerApplication({
 });
 
 registerApplication({
+  name: "@rg/react-lazy",
+  app: () => System.import("@rg/react-lazy"),
+  activeWhen: ['/react-lazy'],
+});
+
+registerApplication({
   name: "@rg/react-route",
   app: () => System.import("@rg/react-route"),
   activeWhen: (location) => location.pathname === '/react-route',
 });
+
+registerApplication({
+  name: "@rg/react-header",
+  app: () => System.import("@rg/react-header"),
+  activeWhen: ['/'],
+});
+
 
 // registerApplication({
 //   name: "@rg/navbar",
