@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { listenEvent } from '@rg/utils'
 
 const App = () => {
     const [tasks, updateTasks] = useState([])
 
     useEffect(() => {
-        window.addEventListener('@rg/react-route/todo/add-task', event => {
+        listenEvent('@rg/react-route/todo/add-task', event => {
             console.log(event)
             updateTasks(oldTasks => [
                 ...oldTasks,
