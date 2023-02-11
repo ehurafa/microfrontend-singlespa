@@ -1,45 +1,23 @@
 import { registerApplication, start } from "single-spa";
 
-registerApplication({
-  name: "@single-spa/welcome",
-  app: () =>
-    System.import(
-      "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
-    ),
-  // activeWhen: ["/"],
-  activeWhen: (location) => location.pathname === '/',
-});
-
-registerApplication({
-  name: "@rg/react-single",
-  app: () => System.import("@rg/react-single"),
-  activeWhen: (location) => location.pathname === '/react-single',
-});
-
-registerApplication({
-  name: "@rg/react-multiples",
-  app: () => System.import("@rg/react-multiples"),
-  activeWhen: ['/react-multiples'],
-});
-
-registerApplication({
-  name: "@rg/react-lazy",
-  app: () => System.import("@rg/react-lazy"),
-  activeWhen: ['/react-lazy'],
-});
-
-registerApplication({
-  name: "@rg/react-route",
-  app: () => System.import("@rg/react-route"),
-  activeWhen: (location) => location.pathname === '/react-route',
-});
-
-registerApplication({
-  name: "@rg/react-header",
-  app: () => System.import("@rg/react-header"),
-  activeWhen: ['/'],
-});
-
+fetch('https://gist.githubusercontent.com/ehurafa/f1d10f354f0d6fdffe8bed85d073c891/raw/74e2987580ee851a02152e6ea1a71354c2e4fd25/microfrontend-applications')
+  .then(resp => resp.json())
+  .then(data => {
+    data.applications.forEach(app => {
+      registerApplication({
+        name: app.name,
+        app: () => System.import(app.package),
+        activeWhen: app.exact
+          ? (location) => location.pathname === app.activeWhen
+          : [app.activeWhen]
+      });
+    })
+  })
+  .finally(() => {
+    start({
+      urlRerouteOnly: true,
+    });
+  })
 
 // registerApplication({
 //   name: "@rg/navbar",
@@ -47,6 +25,4 @@ registerApplication({
 //   activeWhen: ["/"]
 // });
 
-start({
-  urlRerouteOnly: true,
-});
+
