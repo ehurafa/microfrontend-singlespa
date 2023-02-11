@@ -9,6 +9,9 @@ const App = ({ name }) => {
                 <h1>{name}</h1>
                 <nav>
                     <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
                         <Link to="/react-single">Single</Link>
                     </li>
                     <li>
