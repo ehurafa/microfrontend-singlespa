@@ -1,11 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
-const App = ({ name }) => {
+const App = () => {
     const [tasks, updateTasks] = useState([])
+
+    useEffect(() => {
+        window.addEventListener('@rg/react-route/todo/add-task', event => {
+            console.log(event)
+            updateTasks(oldTasks => [
+                ...oldTasks,
+                event.detail
+            ])
+        } )
+    }, [])
 
   return (
     <>
-        <h1>{name}</h1>
+        <h1>@rg/react-parcel</h1>
         <table>
             <thead>
                 <tr>

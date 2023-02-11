@@ -23,9 +23,9 @@ registerApplication({
 });
 
 registerApplication({
-  name: "@rg/react-parcel",
-  app: () => System.import("@rg/react-parcel"),
-  activeWhen: (location) => location.pathname === '/react-parcel',
+  name: "@rg/react-route",
+  app: () => System.import("@rg/react-route"),
+  activeWhen: (location) => location.pathname === '/react-route',
 });
 
 // registerApplication({
