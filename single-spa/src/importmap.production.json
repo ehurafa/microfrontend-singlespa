@@ -1,0 +1,16 @@
+{
+    "imports": {
+      "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
+      "@rg/root-config": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/rg-root-config.js",
+      "@rg/react-single": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/rg-react-single.js",
+      "@rg/react-multiples": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/rg-react-multiples.js",
+      "@rg/react-lazy": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/rg-react-lazy.js",
+      "@rg/react-parcel": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/rg-react-parcel.js",
+      "@rg/react-header": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/rg-react-header.js",
+      "@rg/react-route": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/rg-react-route.js",
+      "@rg/utils": "https://portfolio-mfe.nyc3.digitaloceanspaces.com/rg-utils.js",
+      "react": "https://unpkg.com/react@18/umd/react.production.min.js",
+      "react-dom": "https://unpkg.com/react-dom@18/umd/react-dom.production.min.js",
+      "react-router-dom": "https://unpkg.com/react-router-dom@4.2.2/umd/react-router-dom.min.js"
+    }
+  }

@@ -23,25 +23,11 @@
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
 
   <% if (isLocal) { %>
-  <script type="systemjs-importmap">
-    {
-      "imports": {
-        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-        "@rg/root-config": "//localhost:9000/rg-root-config.js",
-        "@rg/react-single": "//localhost:8504/rg-react-single.js",
-        "@rg/react-multiples": "//localhost:8500/rg-react-multiples.js",
-        "@rg/react-lazy": "//localhost:8502/rg-react-lazy.js",
-        "@rg/react-parcel": "//localhost:8501/rg-react-parcel.js",
-        "@rg/react-header": "//localhost:8506/rg-react-header.js",
-        "@rg/react-route": "//localhost:8500/rg-react-route.js",
-        "@rg/utils": "//localhost:8600/rg-utils.js",
-        "react": "https://unpkg.com/react@18/umd/react.production.min.js",
-        "react-dom": "https://unpkg.com/react-dom@18/umd/react-dom.production.min.js",
-        "react-router-dom": "https://unpkg.com/react-router-dom@4.2.2/umd/react-router-dom.min.js"
-      }
-    }
-  </script>
-  <% } %>
+  <script type="systemjs-importmap" src="https://portfolio-mfe.nyc3.digitaloceanspaces.com/importmap.development.json"></script>
+  <% } else { %>
+    <script type="systemjs-importmap" src="https://portfolio-mfe.nyc3.digitaloceanspaces.com/importmap.production.json"></script>
+
+    <% } %>
 
   <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
