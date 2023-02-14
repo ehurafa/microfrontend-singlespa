@@ -9,6 +9,7 @@
       "@rg/react-header": "http://localhost:8506/rg-react-header.js",
       "@rg/react-route": "http://localhost:8500/rg-react-route.js",
       "@rg/utils": "http://localhost:8600/rg-utils.js",
+      "test-angular": "//localhost:4200/main.js",
       "react": "https://unpkg.com/react@18/umd/react.production.min.js",
       "react-dom": "https://unpkg.com/react-dom@18/umd/react-dom.production.min.js",
       "react-router-dom": "https://unpkg.com/react-router-dom@4.2.2/umd/react-router-dom.min.js"

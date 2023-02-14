@@ -23,6 +23,9 @@ const App = ({ name }) => {
                     <li>
                         <Link to="/react-router">Routes</Link>
                     </li>
+                    <li>
+                        <Link to="/test-angular">Angular</Link>
+                    </li>
 
                 </nav>
             </header>
